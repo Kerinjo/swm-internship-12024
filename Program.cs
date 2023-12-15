@@ -27,13 +27,13 @@ class Program
             var occurencesDictionary = B.GroupBy(i => i)
                 .ToDictionary(g => g.Key, g => g.Count());
             
+            // printing resulting dictionary to the console
             System.Console.WriteLine("Occurences in B:");
             System.Console.WriteLine("Item : Count");
             foreach (var kvp in occurencesDictionary)
             {  
                 System.Console.WriteLine($"{kvp.Key}\t: {kvp.Value}");
             }
-
             System.Console.WriteLine();
 
             // Sieve 
@@ -59,7 +59,7 @@ class Program
             
             List<int> result = Solution(A, B);
 
-
+            // printing resulting sequence in the console
             System.Console.Write("[");
             System.Console.Write(string.Join(", ", result));
             System.Console.WriteLine("]");
